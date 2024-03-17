@@ -1,0 +1,11 @@
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.bbl
+latex/*.blg
+latex/*.bcf
+latex/*.run.xml
+
+__pycache__/
+venv/
