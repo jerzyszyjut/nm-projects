@@ -113,13 +113,13 @@
 \begin{section}{Reverse MACD}
     W trakcie pisania symulacji popełniłem błąd, który spowodował, że ustalałem sygnały kupna i sprzedaży odwrotnie niż powinienem. Co ciekawe, dla instrumentu
     na którym najpierw testowałem algorym - Makarony Polskie S.A. (MAK.PL) ten wskaźnik działał lepiej niż jego podstawowa wersja. Zaczynając z akcjami o wartości 4 174.72zł 
-    MACD kończył z 7 375.18 zł (+76\%) a reverse MACD z 9 080.62 zł (+176\%). Dla akcji Nvidia dawał podobne wyniki w dla obu wersji wskaźnika. 
+    MACD kończył z 7 375.18 zł (+76\%) a reverse MACD z 9 080.62 zł (+176\%). Dla akcji Nvidia dawał podobne wyniki w dla obu wersji. 
     Zaczynając z akcjami o wartości 53 092.39\$ MACD kończył z 212 080.39\$ (+300\%), 
     a reverse MACD z 211 691.65\$ (+299\%).
     \begin{figure}[H]
         \centering
-        \subfloat[Wykres cen zamknięcia akcji Makarony Polskie S.A.]{\includegraphics[width=0.5\textwidth]{closing_prices_makarony_normal.png}}
-        \subfloat[Wykres wskaźnika MACD dla cen zamknięcia akcji Makarony Polskie S.A.]{\includegraphics[width=0.5\textwidth]{macd_makarony_normal.png}}
+        \subfloat[Wykres cen zamknięcia akcji MAK.PL]{\includegraphics[width=0.5\textwidth]{closing_prices_makarony_normal.png}}
+        \subfloat[Wykres wskaźnika MACD dla cen zamknięcia akcji MAK.PL]{\includegraphics[width=0.5\textwidth]{macd_makarony_normal.png}}
     \end{figure}
     \begin{figure}[H]
         \subfloat[Wykres wartości portfela inwestując w MAK.PL dla MACD w zależności od czasu]{\includegraphics[width=0.5\textwidth]{wallet_makarony_normal.png}}
@@ -135,8 +135,8 @@
 
     \begin{figure}[H]
         \centering
-        \subfloat[Wykres cen zamknięcia akcji DoorDash Inc.]{\includegraphics[width=0.5\textwidth]{closing_prices_dash_normal.png}}
-        \subfloat[Wykres wskaźnika MACD dla cen zamknięcia akcji DoorDash Inc.]{\includegraphics[width=0.5\textwidth]{macd_dash_normal.png}}
+        \subfloat[Wykres cen zamknięcia akcji DASH]{\includegraphics[width=0.5\textwidth]{closing_prices_dash_normal.png}}
+        \subfloat[Wykres wskaźnika MACD dla cen zamknięcia akcji DASH]{\includegraphics[width=0.5\textwidth]{macd_dash_normal.png}}
     \end{figure}
     \begin{figure}[H]
         \subfloat[Wykres wartości portfela inwestując w DASH dla MACD w zależności od czasu]{\includegraphics[width=0.5\textwidth]{wallet_dash_normal.png}}
@@ -144,16 +144,16 @@
         \caption{Wykresy przedstawiające ceny zamknięcia akcji, wskaźnik MACD, wartość portfela inwestując w DASH dla MACD i Reverse MACD}
     \end{figure}
 
-    W przypadku akcji DoorDash Inc. (DASH) wskaźnik reverse MACD działał zdecydowanie lepiej niż MACD. Zaczynając z akcjami o wartości 189 510.0 \$
+    W przypadku akcji DoorDash Inc. (DASH) reverse MACD działał zdecydowanie lepiej niż MACD. Zaczynając z akcjami o wartości 189 510.0 \$
     MACD kończył z 103 791.27 \$ co daje spadek o całe 85 718.72 \$ (-45\%), a reverse MACD kończył z 233 953.18 \$ co daje wzrost o 44 443.18 \$ (+23\%). 
     Akcje DASH spadły w tym okresie o 34\%.
-    Dla tego instrumentu giełdowego, którego cena spadała w ciągu ostatnich lat, wskaźnik reverse MACD zadziałał lepiej niż MACD.
+    Dla tego instrumentu giełdowego, którego cena spadała w ciągu ostatnich lat, reverse MACD zadziałał lepiej niż MACD.
 \end{section}
 
 \begin{section}{Podsumowanie}
     Na podstawie powyższej analizy i przeprowadzonych symulacji, można stwierdzić, że wskaźnik MACD nie jest najlepszym wskaźnikiem giełdowym.
-    W dodatku jego odwrotna wersja działa lepiej lub nieznacznie gorzej dla instrumentów giełdowych, które sprawdzałem. Dla akcji z 
-    częstymi zmianami trendu cenowego wskaźnik MACD często zwraca sygnały kupna/sprzedaży, które w prawdziwym życiu,
+    W dodatku jego odwrotna wersja działa lepiej lub nieznacznie gorzej dla instrumentów giełdowych, które sprawdzałem, co czyni ten wskaźnik śmiecznym.
+    Dla akcji z częstymi zmianami trendu cenowego wskaźnik MACD często zwraca sygnały kupna/sprzedaży, które w prawdziwym życiu,
     w połączeniu z prowizjami domów maklerskich, prowadziłyby do znacznie mniejszych zysków, a nawet straty, poprzez częste transakcje. 
     Wydaje mi się, że ciężko sprawić, aby algorytmu używające po prostu wskaźnika MACD działał lepiej niż strategia "kup i trzymaj".
     Do dalszej analizy warto byłoby sprawdzić czy zmiana długości okresów może poprawić jego skuteczność.
