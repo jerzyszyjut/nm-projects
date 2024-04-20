@@ -22,9 +22,8 @@ function = "n"
 
 A = UserMatrix(a1, a2, a3, index_number=index_number)
 b = VectorB(index_number=index_number, function=function)
-
 # B
-
+print("B")
 try:
     jacobi_solver = pickle.load(open("snapshots/jacobi_b.pkl", "rb"))
     print("Loaded Jacobi from file!")
@@ -32,6 +31,9 @@ except:
     jacobi_solver = JacobiSolver(A, b)
     print("Jacobi finished!")
     pickle.dump(jacobi_solver, open("snapshots/jacobi_b.pkl", "wb"))
+print(f"Duration: {jacobi_solver.duration}")
+print(f"Iters: {len(jacobi_solver.errors)}")
+print(f"Error: {jacobi_solver.errors[-1]}")
 
 try:
     gauss_solver = pickle.load(open("snapshots/gauss_seidel_b.pkl", "rb"))
@@ -40,6 +42,9 @@ except:
     gauss_solver = GaussSeidelSolver(A, b)
     print("Gauss-Seidel finished!")
     pickle.dump(gauss_solver, open("snapshots/gauss_seidel_b.pkl", "wb"))
+print(f"Duration: {gauss_solver.duration}")
+print(f"Iters: {len(gauss_solver.errors)}")
+print(f"Error: {gauss_solver.errors[-1]}")
 
 plt.title("Błędy w kolejnych iteracjach dla a1 = 5 + e (5), a2 = a3 = -1")
 plt.plot(gauss_solver.errors, label="Gauss-Seidel")
@@ -52,6 +57,7 @@ plt.savefig("images/bledy_zbiezne.png")
 plt.close()
 
 # C 
+print("C")
 a1 = 3 
 a2 = a3 = -1
 A = UserMatrix(a1, a2, a3, index_number=index_number)
@@ -64,6 +70,9 @@ except:
     jacobi_solver = JacobiSolver(A, b)
     print("Jacobi finished!")
     pickle.dump(jacobi_solver, open("snapshots/jacobi_c.pkl", "wb"))
+print(f"Duration: {jacobi_solver.duration}")
+print(f"Errors: {jacobi_solver.errors[-1]}")
+print(f"Iters: {len(jacobi_solver.errors)}")
 
 try:
     gauss_solver = pickle.load(open("snapshots/gauss_seidel_c.pkl", "rb"))
@@ -72,6 +81,9 @@ except:
     gauss_solver = GaussSeidelSolver(A, b)
     print("Gauss-Seidel finished!")
     pickle.dump(gauss_solver, open("snapshots/gauss_seidel_c.pkl", "wb"))
+print(f"Duration: {gauss_solver.duration}")
+print(f"Errors: {gauss_solver.errors[-1]}")
+print(f"Iters: {len(gauss_solver.errors)}")
 
 plt.title("Błędy w kolejnych iteracjach dla a1 = a2 = a3 = -1")
 plt.plot(gauss_solver.errors, label="Gauss-Seidel")
@@ -84,6 +96,7 @@ plt.savefig("images/bledy_rozbiezne.png")
 plt.close()
 
 # D 
+print("D")
 A = UserMatrix(a1, a2, a3, index_number=index_number)
 b = VectorB(index_number=index_number, function=function)
 try:
@@ -97,6 +110,7 @@ print(f"Duration: {lu_solver.duration}")
 print(f"Errors: {lu_solver.errors}")
 
 # E
+print("E")
 a1 = 5 + e
 a2 = a3 = -1
 sizes = [100, 500, 1000, 2000, 3000, 4000]

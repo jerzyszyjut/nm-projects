@@ -1,3 +1,14 @@
 venv/
 __pycache__/
 *.pkl
+*.aux
+*.log
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.xml
+*.synctex.gz
+*.toc
