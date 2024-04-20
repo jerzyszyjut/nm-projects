@@ -17,7 +17,7 @@
 
 \title{Metody numeryczne - projekt 1 - MACD}
 \author{Jerzy Szyjut, numer albumu: 193064}
-\date{21.01.2023r.}
+\date{17.03.2024r.}
 
 \usepackage{csquotes}
 \begin{document}
@@ -62,9 +62,9 @@
     \end{figure}
     Wykresy przedstawiające ceny zamknięcia akcji Nvidia oraz wskaźnik MACD dla tych cen w przedziałach czasowych od 19.03.2020 do 08.03.2024.
     Na przestrzeni tych lat ceny akcji Nvidia wzrosły z 53 do 875 dolarów (wzrost o 1650\%).
-    Porównując ten wykres z wykresem wskaźnika MACD, można zauważyć, że wskaźnik MACD proponował sprzedaż w momencie przed lokalnym dołkiem cenowym, a kupno w momencie przed lokalnym szczytem cenowym.
+    Porównując ten wykres z wykresem wskaźnika MACD, można zauważyć, że wielu wypadkach wskaźnik MACD proponował sprzedaż w momencie przed lokalnym dołkiem cenowym, a kupno w momencie przed lokalnym szczytem cenowym.
     Wskaźnik MACD przyjmował wartości ujemne, kiedy wartość akcji spadała, a wartości dodatnie, kiedy wartość akcji rosła.
-    Dzięki róznicom między wartościami MACD i sygnału, wskaźnik informuje nas o zmianach trendu cenowego.
+    Dzięki róznicom między wartościami MACD i sygnału może się zdawać, że wskaźnik informuje nas o zmianach trendu cenowego.
 
     \subsection{Interpretacja wycinków wykresów}
     \begin{figure}[H]
@@ -83,11 +83,11 @@
     \end{figure}
     Wycinki wykresów przedstawiające ceny zamknięcia akcji Nvidia oraz wskaźnik MACD w okresie od 23.05.2023 do 08.03.2024.
     W tym okresie wskaźnik MACD już nie działał tak skutecznie jak w poprzednim wypadku. Przez częste zmiany trendu cenowego,
-    wskaźnik "dawał się łapać" na chwilowe dołki. Jeśli spojrzymy na sygnały kupna/sprzedaży, to widać, że wskaźnik w większości miejsc
+    wskaźnik "dawał się łapać" na chwilowe dołki. Jeśli spojrzymy na sygnały kupna i sprzedaży, to widać, że wskaźnik w większości miejsc
     proponował zakup po cenie wyższej niż ostatnia cena sprzedaży i sprzedaż po cenie niższej niż ostatnia cena zakupu.
 
     \subsection{Wnioski}
-    Wskaźnik MACD jest skutecznym narzędziem do analizy trendów cenowych. W przypadku akcji Nvidia, wskaźnik MACD w ogólności był w stanie przewidzieć trendy cenowe.
+    Wskaźnik MACD nie jest skutecznym narzędziem do analizy trendów cenowych. W przypadku akcji Nvidia, wskaźnik MACD w ogólności był w stanie przewidzieć trendy cenowe.
     Jednak w przypadku częstych zmian trendu cenowego, wskaźnik MACD daje sygnały kupna/sprzedaży, które są nieopłacalne. W okresach w których występując
     częste zmiany trendu cenowego (np. w roku 2020 i pierwszej połowie 2021 roku), wskaźnik MACD często proponuje dokonywanie transakcji, co w prawdziwych 
     warunkach, gdzie nasze transakcje są obarczone prowizjami domów maklerskich, prowadziłoby do straty pieniędzy.
@@ -115,7 +115,7 @@
     na którym najpierw testowałem algorym - Makarony Polskie S.A. (MAK.PL) ten wskaźnik działał lepiej niż jego podstawowa wersja. Zaczynając z akcjami o wartości 4 174.72zł 
     MACD kończył z 7 375.18 zł (+76\%) a reverse MACD z 9 080.62 zł (+176\%). Dla akcji Nvidia dawał podobne wyniki w dla obu wersji. 
     Zaczynając z akcjami o wartości 53 092.39\$ MACD kończył z 212 080.39\$ (+300\%), 
-    a reverse MACD z 211 691.65\$ (+299\%).
+    a reverse MACD z 211 691.65\$ (+299\%). Poniżej wykresy.
     \begin{figure}[H]
         \centering
         \subfloat[Wykres cen zamknięcia akcji MAK.PL]{\includegraphics[width=0.5\textwidth]{closing_prices_makarony_normal.png}}
@@ -152,8 +152,8 @@
 
 \begin{section}{Podsumowanie}
     Na podstawie powyższej analizy i przeprowadzonych symulacji, można stwierdzić, że wskaźnik MACD nie jest najlepszym wskaźnikiem giełdowym.
-    W dodatku jego odwrotna wersja działa lepiej lub nieznacznie gorzej dla instrumentów giełdowych, które sprawdzałem, co czyni ten wskaźnik śmiecznym.
-    Dla akcji z częstymi zmianami trendu cenowego wskaźnik MACD często zwraca sygnały kupna/sprzedaży, które w prawdziwym życiu,
+    W dodatku jego odwrotna wersja działa lepiej lub nieznacznie gorzej dla instrumentów giełdowych, które sprawdzałem, co moim zdaniem czyni ten wskaźnik nieprzydatnym.
+    Dla akcji z częstymi zmianami trendu cenowego wskaźnik MACD często zwraca sygnały kupna i sprzedaży, które w prawdziwym życiu,
     w połączeniu z prowizjami domów maklerskich, prowadziłyby do znacznie mniejszych zysków, a nawet straty, poprzez częste transakcje. 
     Wydaje mi się, że ciężko sprawić, aby algorytmu używające po prostu wskaźnika MACD działał lepiej niż strategia "kup i trzymaj".
     Do dalszej analizy warto byłoby sprawdzić czy zmiana długości okresów może poprawić jego skuteczność.
