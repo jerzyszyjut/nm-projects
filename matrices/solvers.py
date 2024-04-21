@@ -29,7 +29,7 @@ class GaussSolver(Solver):
 
     def solve(self, A, b):
         n = A.n
-        x = VectorB(n)
+        x = VectorB(n, function="1")
 
         start = time.time()
         
@@ -62,9 +62,9 @@ class JacobiSolver(Solver):
         super().__init__("Jacobi", A, b, debug)
         self.x, self.duration, self.errors = self.solve(A, b)
 
-    def solve(self, A, b, max_iter=100, eps=1e-9):
+    def solve(self, A, b, max_iter=200, eps=1e-9):
         n = A.n
-        x = VectorB(n)
+        x = VectorB(n, function="1")
         x_new = copy.deepcopy(x)
         errors = []
 
@@ -98,9 +98,9 @@ class GaussSeidelSolver(Solver):
         super().__init__("Gauss-Seidel", A, b, debug)
         self.x, self.duration, self.errors = self.solve(A, b)
 
-    def solve(self, A, b, max_iter=100, eps=1e-9):
+    def solve(self, A, b, max_iter=200, eps=1e-9):
         n = A.n
-        x = VectorB(n)
+        x = VectorB(n, function="1")
         x_new = copy.deepcopy(x)
         start = time.time()
         errors = []

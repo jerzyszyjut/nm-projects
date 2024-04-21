@@ -135,16 +135,16 @@
     \end{center}
     Na powyższym wykresie przedstawiono zmiany wartości normy wektora residuum w zależności od liczby iteracji
     dla metod Jacobiego i Gaussa-Seidla. Jak widać, metoda Gaussa-Seidla zbiega do rozwiązania znacznie szybciej
-    niż metoda Jacobiego. Dla zadanego progu błędu $\epsilon = 10^{-9}$ metoda Gaussa-Seidla osiąga zbieżność w 42
-    iteracjach, podczas gdy metoda Jacobiego osiąga zbieżność w 70 iteracjach.
+    niż metoda Jacobiego. Dla zadanego progu błędu $\epsilon = 10^{-9}$ metoda Gaussa-Seidla osiąga zbieżność w 60
+    iteracjach, podczas gdy metoda Jacobiego osiąga zbieżność w 109 iteracjach.
     \begin{table}[H]
         \centering
         \begin{tabular}{|c|c|c|c|}
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $70$ & $11.79$ & $8.58\cdot10^{-10}$ \\
-            Gaussa-Seidla & $42$ & $8.46$ & $6.66\cdot10^{-10}$ \\
+            Jacobiego & $109$ & $18.04$ & $8.33\cdot10^{-10}$ \\
+            Gaussa-Seidla & $60$ & $12.00$ & $8.25\cdot10^{-10}$ \\
             \hline
         \end{tabular}
         \caption{Porównanie liczby iteracji, czasu obliczeń i normy wektora residuum dla metod Jacobiego i Gaussa-Seidla}
@@ -195,13 +195,13 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $100$ & $17.47$ & $1.25\cdot10^{10}$ \\
-            Gaussa-Seidla & $100$ & $20.08$ & $9.74\cdot10^{27}$ \\
+            Jacobiego & $200$ & $35.92$ & $2.94\cdot10^{26}$ \\
+            Gaussa-Seidla & $200$ & $43.98$ & $4.02\cdot10^{61}$ \\
             \hline
         \end{tabular}
         \caption{Porównanie liczby iteracji, czasu obliczeń i normy wektora residuum dla metod Jacobiego i Gaussa-Seidla}
     \end{table}
-    Jak widać, obie metody zakończyły swoje działanie po 100 iteracjach, co jest maksymalną liczbą iteracji w moim programie.
+    Jak widać, obie metody zakończyły swoje działanie po 200 iteracjach, co jest maksymalną liczbą iteracji w moim programie.
 
 \end{section}
 
@@ -214,7 +214,7 @@
             \hline
             Metoda & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Faktoryzacja LU & $39.13$ & $2.36\cdot10^{-13}$ \\
+            Faktoryzacja LU & $41.27$ & $2.36\cdot10^{-13}$ \\
             \hline
         \end{tabular}
         \caption{Wyniki faktoryzacji LU dla macierzy rozbieżnej}
@@ -238,8 +238,8 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $69$ & $0.15$ & $9.11\cdot10^{-10}$ \\
-            Gaussa-Seidla & $41$ & $0.09$ & $9.11\cdot10^{-10}$ \\
+            Jacobiego & $103$ & $0.25$ & $8.47\cdot10^{-10}$ \\
+            Gaussa-Seidla & $57$ & $0.14$ & $8.47\cdot10^{-10}$ \\
             Faktoryzacja LU & $1$ & $0.06$ & $7.93\cdot10^{-16}$ \\
             \hline
         \end{tabular}
@@ -252,8 +252,8 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $71$ & $3.30$ & $8.24\cdot10^{-10}$ \\
-            Gaussa-Seidla & $42$ & $1.90$ & $8.24\cdot10^{-10}$ \\
+            Jacobiego & $107$ & $5.62$ & $9.22\cdot10^{-10}$ \\
+            Gaussa-Seidla & $59$ & $3.45$ & $9.22\cdot10^{-10}$ \\
             Faktoryzacja LU & $1$ & $5.13$ & $1.78\cdot10^{-15}$ \\
             \hline
         \end{tabular}
@@ -266,8 +266,8 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $69$ & $12.34$ & $9.03\cdot10^{-10}$ \\
-            Gaussa-Seidla & $40$ & $7.25$ & $7.25\cdot10^{-10}$ \\
+            Jacobiego & $109$ & $20.29$ & $8.49\cdot10^{-10}$ \\
+            Gaussa-Seidla & $60$ & $8.49$ & $8.49\cdot10^{-10}$ \\
             Faktoryzacja LU & $1$ & $45.42$ & $2.50\cdot10^{-15}$ \\
             \hline
         \end{tabular}
@@ -280,8 +280,8 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $70$ & $49.15$ & $9.62\cdot10^{-10}$ \\
-            Gaussa-Seidla & $42$ & $30.34$ & $9.62\cdot10^{-10}$ \\
+            Jacobiego & $110$ & $81.18$ & $9.70\cdot10^{-10}$ \\
+            Gaussa-Seidla & $42$ & $57.95$ & $9.70\cdot10^{-10}$ \\
             Faktoryzacja LU & $1$ & $375.68$ & $3.53\cdot10^{-15}$ \\
             \hline
         \end{tabular}
@@ -294,8 +294,8 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $70$ & $111.21$ & $9.99\cdot10^{-10}$ \\
-            Gaussa-Seidla & $42$ & $81.47$ & $9.99\cdot10^{-10}$ \\
+            Jacobiego & $111$ & $185.46$ & $9.53\cdot10^{-10}$ \\
+            Gaussa-Seidla & $61$ & $123.50$ & $9.53\cdot10^{-10}$ \\
             Faktoryzacja LU & $1$ & $1378.66$ & $4.31\cdot10^{-15}$ \\
             \hline
         \end{tabular}
@@ -308,8 +308,8 @@
             \hline
             Metoda & Liczba iteracji & Czas obliczeń [s] & Norma wektora residuum \\
             \hline
-            Jacobiego & $69$ & $251.88$ & $8.00\cdot10^{-10}$ \\
-            Gaussa-Seidla & $40$ & $165.24$ & $8.00\cdot10^{-10}$ \\
+            Jacobiego & $112$ & $355.63$ & $8.81\cdot10^{-10}$ \\
+            Gaussa-Seidla & $62$ & $246.07$ & $8.81\cdot10^{-10}$ \\
             Faktoryzacja LU & $1$ & $3306.43$ & $4.93\cdot10^{-15}$ \\
             \hline
         \end{tabular}

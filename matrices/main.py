@@ -85,7 +85,7 @@ print(f"Duration: {gauss_solver.duration}")
 print(f"Errors: {gauss_solver.errors[-1]}")
 print(f"Iters: {len(gauss_solver.errors)}")
 
-plt.title("Błędy w kolejnych iteracjach dla a1 = a2 = a3 = -1")
+plt.title("Błędy w kolejnych iteracjach dla a1 = 3, a2 = a3 = -1")
 plt.plot(gauss_solver.errors, label="Gauss-Seidel")
 plt.plot(jacobi_solver.errors, label="Jacobi")
 plt.yscale('log')
