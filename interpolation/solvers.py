@@ -45,21 +45,21 @@ class LUFactorizationSolver(Solver):
 
     start = time.time()
     
-    transform_matrix = Matrix(A.n, A.n)
+    # transform_matrix = Matrix(A.n, A.n)
     
-    for i in range(n):
-      transform_matrix.matrix[i][i] = 1
+    # for i in range(n):
+    #   transform_matrix.matrix[i][i] = 1
         
     for i in range(n):
-      current_column = [U.matrix[j][i] for j in range(i, n)]
-      pivot = max(current_column, key=abs)
-      pivot_index = current_column.index(pivot) + i
-      if pivot == 0:
-        raise ValueError("Matrix is singular")
-      if pivot_index != i:
-        U.swap_rows(i, pivot_index)
-        L.swap_rows(i, pivot_index)
-        transform_matrix.swap_rows(i, pivot_index)
+      # current_column = [U.matrix[j][i] for j in range(i, n)]
+      # pivot = max(current_column, key=abs)
+      # pivot_index = current_column.index(pivot) + i
+      # if pivot == 0:
+      #   raise ValueError("Matrix is singular")
+      # if pivot_index != i:
+      #   U.swap_rows(i, pivot_index)
+      #   L.swap_rows(i, pivot_index)
+      #   transform_matrix.swap_rows(i, pivot_index)
           
       for j in range(i+1, n):
         factor = U.matrix[j][i] / U.matrix[i][i]
@@ -86,6 +86,8 @@ class LUFactorizationSolver(Solver):
 
     if self.debug:
       print("Finished backward substitution")
+
+    # x = transform_matrix * x
 
     end = time.time()
 
